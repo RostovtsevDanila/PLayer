@@ -1,74 +1,48 @@
-import QtQuick 2.12
-import QtQuick.Window 2.12
+import QtQuick 2.2
+import QtQuick.Window 2.2
 
 Window {
 	id: root
 	visible: true
 	width: 360
-	height: 720
+	height: width
 	title: qsTr("Test App")
+	color: "lightgray"
 
-	Rectangle {
-		width: root.width
-		height: root.height
 
-		ListModel {
-			id: dataModel
-		}
 
-		ListView {
-			id: view
+	/*	ListModel {
+		id: model
+	}
 
-			width: parent.width
-			height: parent.height - button.height - 10
-			spacing: 10
-			model: dataModel
-			clip: true
+	ListView {
+		id: view
+		width: parent.width
+		height: parent.height
+		spacing: 0
+		model: model
+		clip: true
 
-			delegate: Rectangle {
-				width: view.width - 10
-				height: 40
-				radius: 3
-				border.width: 1
-				border.color: "lightblue"
-				color: "skyblue"
-
+		ClockFace {
+			SecondHand {
+				height: parent.height / 2.2
+				anchors.top: parent.verticalCenter
 				anchors.horizontalCenter: parent.horizontalCenter
-
-				Text {
-					anchors.centerIn: parent
-					renderType: Text.NativeRendering
-					text: model.index
-				}
 			}
-		}
-
-		Rectangle {
-			id: button
-
-			width: 100
-			height: 40
-			radius: 5
-
-			anchors {
-				horizontalCenter: parent.horizontalCenter
-				bottom: parent.bottom
+			MinuteHand {
+				height: parent.height / 3
+				anchors.top: parent.verticalCenter
+				anchors.horizontalCenter: parent.horizontalCenter
 			}
-			border {
-				color: "black"
-				width: 1
-			}
-
-			Text {
-				anchors.centerIn: parent
-				renderType: Text.NativeRendering
-				text: "Add"
-			}
-
-			MouseArea {
-				anchors.fill: parent
-				onClicked: dataModel.append({})
+			HourHand {
+				height: parent.height / 4
+				anchors.top: parent.verticalCenter
+				anchors.horizontalCenter: parent.horizontalCenter
 			}
 		}
 	}
+	*/
+
+	DigitalClockFace {}
+
 }
