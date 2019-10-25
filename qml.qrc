@@ -1,11 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>ExampleButton.qml</file>
-        <file>ClockFace.qml</file>
-        <file>SecondHand.qml</file>
-        <file>MinuteHand.qml</file>
-        <file>HourHand.qml</file>
         <file>DigitalClockFace.qml</file>
     </qresource>
 </RCC>
