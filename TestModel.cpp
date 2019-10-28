@@ -3,35 +3,29 @@
 TestModel::TestModel(QObject *parent) : QAbstractListModel (parent)
 {
 	ViewDir dir;
-	dir.getHomeList ();
+    dir.getHomeList();
 
-	for (auto str: dir.rootList)
-	{
+    for (auto str: dir.rootList) {
 		m_data.append(str);
 	}
-
-	//m_data.append("old");
-	//m_data.append("another old");
 }
 
 int TestModel::rowCount(const QModelIndex &parent) const
 {
-	if(parent.isValid())
-	{
+    if(parent.isValid()) {
 		return 0;
 	}
+
 	return m_data.size();
 }
 
 QVariant TestModel::data(const QModelIndex &index, int role) const
 {
-	if(!index.isValid())
-	{
+    if(!index.isValid()) {
 		return QVariant();
 	}
 
-	switch (role)
-	{
+    switch (role) {
 	case ColorRole:
 		return QVariant("#00AB6F");
 	case TextRole:

@@ -20,8 +20,8 @@ void ViewDir::showRootDir()
 
 	QDir dir(rootPath);
 	QStringList rootList = dir.entryList(QDir::NoDotAndDotDot | QDir::Dirs);
-	for (auto str: rootList)
-	{
+
+    for (auto str: rootList) {
 		std::cout << str.toStdString() << std::endl;
 	}
 }

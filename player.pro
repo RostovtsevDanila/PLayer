@@ -23,7 +23,8 @@ RESOURCES += \
 
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH = /home/danila/'Рабочий стол'/dev/player/
+QML_IMPORT_PATH =  $$PWD/dev/player/
+message($$QML_IMPORT_PATH)
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
