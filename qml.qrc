@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ExampleButton.qml</file>
+        <file>QML_SecondTask.qml</file>
+        <file>QML_ForthTask.qml</file>
     </qresource>
 </RCC>
